@@ -17,6 +17,8 @@ client.on('ready', () => {
     client.user.setStatus("dnd")
  client.user.setGame(`Spicy Things`,`https://www.twitch.tv/snowyxoxo2`);
 });
+const prefix = "2"
+client.on('message', async msg => {
 if(message.content === "ha") {
    const ayy = client.emojis.find(emoji => emoji.name === "ha");
    message.reply(`${ayy} LMAO`);
