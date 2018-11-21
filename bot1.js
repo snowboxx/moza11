@@ -20,6 +20,11 @@ client.on('ready', () => {
 client.on('ready', () => {
   console.log('I am ready!');
 });
-
+const prefix = "2"
+client.on('message', async msg => {
+message.channel.send({embed: {
+  color: 3447003,
+  description: "a"
+}});
 
 client.login(process.env.BOT_TOKEN);
