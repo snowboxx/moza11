@@ -17,11 +17,17 @@ client.on('ready', () => {
     client.user.setStatus("dnd")
  client.user.setGame(`Spicy Things`,`https://www.twitch.tv/snowyxoxo2`);
 });
-const prefix = "2"
-client.on('message', async msg => {
-if(message.content === "ha") {
-   const ayy = client.emojis.find(emoji => emoji.name === "ha");
-   message.reply(`${ayy} LMAO`);
-}); 
+client.on('ready', () => {
+  console.log('I am ready!');
+});
+
+// Create an event listener for messages
+client.on('message', message => {
+  // If the message is "what is my avatar"
+  if (message.content === 'what is my avatar') {
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
+  }
+});
 
 client.login(process.env.BOT_TOKEN);
