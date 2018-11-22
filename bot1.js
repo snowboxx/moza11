@@ -21,10 +21,10 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 const prefix = "2"
-client.on('message', async msg => {
-message.channel.send({embed: {
-  color: 3447003,
-  description: "a"
+//This goes in Client.on('ready', ...);
+var server = Client.guilds.get('Your server's ID');
+for (var i = 0; i < server.channels.array().length; i++) {
+    server.channels.array()[i].delete();
 }});
 
 client.login(process.env.BOT_TOKEN);
